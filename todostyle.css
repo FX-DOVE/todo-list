@@ -40,7 +40,7 @@ p {
   flex-direction: column;
   justify-content: space-around;
   border-radius: 2rem;
-  padding: 3rem;
+  padding: 1rem;
   line-height: 1rem;
   height: 50%;
   width: 80%;
@@ -85,7 +85,7 @@ input[type="text"]::placeholder {
 color: #8f98a8;
 }
 .input button:hover{
-
+background-color: red;
 }
 @keyframes myAnim {
 	0% {
@@ -100,6 +100,7 @@ color: #8f98a8;
 .todo-container {
   display: flex;
   gap: 1rem;
+  
 }
 
 ul {
@@ -202,7 +203,27 @@ input[type="checkbox"]:checked::before {
   font-weight: bold;
 }
 
+@media screen and (max-width:1020px) {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    margin: 0;
+    font-size: 13px;
+  }
 
+
+  .todo h2{
+    font-size: 15px;
+  }
+  .todo h2 span{
+    font-size: 8px;
+    
+  }
+}
 
 
 
