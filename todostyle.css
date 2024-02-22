@@ -197,6 +197,12 @@ input[type="checkbox"]:checked::before {
 .made-by {
   color: rgb(33, 31, 31);
 }
+hr{
+display: block;
+background-color: white;
+outline: none;
+border: none;
+}
 
 .author {
   color: red;
@@ -230,6 +236,11 @@ input[type="checkbox"]:checked::before {
     height: 1rem;
     font-size: 1rem;
    
+  }
+  .input button{
+
+    font-size: 10px;
+    padding: auto;
   }
 }
 
