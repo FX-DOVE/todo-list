@@ -1,0 +1,211 @@
+
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background: rgb(238,174,202);
+  background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+}
+
+.btn {
+
+  font-size: 1.1rem;
+  padding: 0.7rem 1.5rem;
+  border-radius: 0.3rem;
+  background-color: grey;
+  border: none;
+  position: absolute;
+  right: 0.5rem;
+  bottom: 0.5rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+/* Todo Container */
+
+.todo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border-radius: 2rem;
+  padding: 3rem;
+  line-height: 1rem;
+  height: 50%;
+  width: 80%;
+  background-color: white;
+  box-shadow: 0 1rem 3rem 1rem rgba(0, 23, 71, 0.15);
+  animation: leftentrance 2s ease 0s 1 normal forwards;
+}
+@keyframes leftentrance {
+	0% {
+		animation-timing-function: ease-in;
+		opacity: 0;
+		transform: translateX(-250px);
+	}
+
+	
+}
+
+h2 {
+  text-transform: uppercase;
+  height: 3rem;
+  color: black;
+  text-align: center;
+}
+h2 span{
+  font-size: 12px;
+}
+
+.input {
+  position: relative;
+  display: flex;
+}
+
+.input-field {
+  width: 100%;
+  border: 0.06rem solid #d2d2d2bf;
+  border-radius: 0.5rem;
+  padding: 1.25rem;
+  font-size: 1rem;
+}
+
+input[type="text"]::placeholder {
+color: #8f98a8;
+}
+.input button:hover{
+
+}
+@keyframes myAnim {
+	0% {
+		transform: scale(0.5);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
+
+.todo-container {
+  display: flex;
+  gap: 1rem;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  overflow-y: auto;
+}
+
+li {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  padding: 1.3rem;
+}
+
+#todoList p {
+  display: flex;
+  gap: 1rem;
+  color: black;
+  align-items: center;
+}
+
+#todoList .disabled {
+  color: #8f98a8;
+}
+
+.disabled {
+  display: flex;
+  text-decoration: line-through;
+
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+}
+
+input[type="checkbox"]::before {
+  content: "\2713";
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  font-size: 1.7rem;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 50%;
+  color: transparent;
+
+}
+
+input[type="checkbox"]:checked::before {
+  color: black;
+  border: none;
+  outline: none;
+}
+
+
+
+.counter-container {
+  height: 2rem;
+  display: flex;
+  justify-content: space-between;
+ 
+}
+
+.counter-container p {
+  align-self: center;
+}
+
+.counter-container button {
+  border: none;
+  background-color: transparent;
+  color: grey;
+  font-size: 1rem;
+}
+
+.footer {
+  display: flex;
+  gap: 1.8rem;
+  padding: 1.2rem;
+  border-radius: 0.5rem;
+
+  animation: myAnim 2s ease 0s 1 normal forwards;
+
+}
+
+.made-by,
+.author {
+  font-size: 1rem;
+}
+
+.made-by {
+  color: rgb(33, 31, 31);
+}
+
+.author {
+  color: red;
+  font-weight: bold;
+}
+
+
+
+
+
+
+
+
