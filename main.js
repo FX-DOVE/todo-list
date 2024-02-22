@@ -21,13 +21,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function addTask() {
   const newTask = todoInput.value.trim();
-  if (newTask !== "") {
+  if (newTask === ""){
+    alert('input box cannot be empty')
+  }
+  else {
     todo.push({ text: newTask, disabled: false });
     saveToLocalStorage();
     todoInput.value = "";
     displayTasks();
+   
   }
 }
+
+
+    
+        
+
+  
 
 function displayTasks() {
   todoList.innerHTML = "";
@@ -47,9 +57,25 @@ function displayTasks() {
       toggleTask(index)
     );
     todoList.appendChild(p);
+    const span = document.createElement("span")
+    span.innerHTML = "\u00d7"
+    p.appendChild(span); 
+
+    document.addEventListener('click', function(e) {
+      const target = e.target;
+      if (target.tagName === 'SPAN' && target.parentNode.tagName === 'P') {
+        target.parentNode.remove();
+     
+       
+      }
+      saveToLocalStorage();
+    });
+ 
   });
-  todoCount.textContent = todo.length;
+  todoCount.textContent = todo.length;  
 }
+
+
 
 function editTask(index) {
   const todoItem = document.getElementById(`todo-${index}`);
